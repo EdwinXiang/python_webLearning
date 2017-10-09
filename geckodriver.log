@@ -200,3 +200,23 @@ JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCK
 1503327544120	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:8000/"
 1503327544146	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:8000/"
 1503327544224	Marionette	INFO	New connections will no longer be accepted
+1504280898552	geckodriver	INFO	geckodriver 0.18.0
+1504280898560	geckodriver	INFO	Listening on 127.0.0.1:61462
+1504280899754	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
+1504280900615	Marionette	INFO	Enabled via --marionette
+2017-09-01 23:48:22.428 plugin-container[63750:2735602] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xa23f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2017-09-01 23:48:22.433 plugin-container[63750:2735602] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xa603, name = 'com.apple.CFPasteboardClient'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1504280902812	Marionette	INFO	Listening on port 61471
+JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
+1504280902888	Marionette	WARN	TLS certificate errors will be ignored for this session
+1504280902922	Marionette	DEBUG	loaded listener.js
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1504280977064	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.baidu.com/baidu?wd=%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE&tn=monline_dg&ie=utf-8"
+1504280978569	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.baidu.com/baidu?wd=%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE&tn=monline_dg&ie=utf-8"
+1504280978571	Marionette	DEBUG	Received DOM event "unload" for "https://www.baidu.com/baidu?wd=%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE&tn=monline_dg&ie=utf-8"
+1504280980295	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://example.webscraping.com/search"
+1504280981804	Marionette	DEBUG	Received DOM event "pageshow" for "http://example.webscraping.com/search"
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 63750] WARNING: pipe error: Broken pipe: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 709

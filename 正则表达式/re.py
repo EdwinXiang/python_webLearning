@@ -1,7 +1,7 @@
 #coding:utf-8
-# 导入模块
 import re
 
-# 使用match方法进行匹配操作
-result = re.match("^[0-9{11}$]","13240395822")
-print(result.group())
+# ret = re.match(r"<(\w*)><(\w*)>.*</2></1>","<html><h1>www.itcast.com</h1></html>")
+# print(ret.group())
+ret = re.match(r"<(\w*)><(\w*)>.*</\2></\1>", "<html><h1>www.itcast.cn</h1></html>")
+print(ret.group())

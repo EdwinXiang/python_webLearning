@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>循环语句</title>
+	<script type="text/javascript">
+		// for 循环
+		/*
+		for (var i=0; i<len,i++){
+	
+		}
+		*/
+
+		// while
+		/*
+		var i=0;
+		while(i<8){
+		...
+		i++;
+		}
+		*/
+		// 数组去重
+		var alist = [1,2,3,4,5,6,4,2,5,1,5,7,8,5,3,2,9,0,2];
+		var alist2 = [];
+		for (var i = 0; i < alist.length; i++) {
+			if (alist.indexOf(alist[i]) == i){
+				alist2.push(alist[i]);
+			} 
+		}
+
+		alert(alist2);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

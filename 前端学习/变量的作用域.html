@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量的作用域</title>
+	<script type="text/javascript">
+		window.onload=function() {
+			// body...
+			var a = 30;
+
+			function myalert() {
+			// body...
+				var b = 56;
+				alert(a);
+				alert(b);
+			}
+
+			myalert();
+			alert(a);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

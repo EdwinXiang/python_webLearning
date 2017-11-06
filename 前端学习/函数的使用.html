@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的使用</title>
+	<script type="text/javascript">
+
+		alert(a); // 弹出undefined
+
+		//alert(c); 报错，c没有声明
+
+		var a = 123;
+
+
+		// 弹出 hello!
+
+		myalert();
+
+
+		function myalert(){
+
+			alert('hello!');
+
+		}
+
+		window.onload=function() {
+			// body...
+			// 匿名函数
+			var funA = document.getElementById('function1');
+			funA.onclick = function(){
+			// body...
+			alert('hello world');
+
+			// 函数传递参数
+			var agrement = document.getElementById('passAgr');
+			changeStyle('color','red');
+
+			function changeStyle(styl,agr) {
+				// body...
+				agrement.style[styl]=agr;
+			}
+
+			// 函数的return使用
+			var num1 = document.getElementById('num1');
+			var num2 = document.getElementById('num2');
+
+			var res = document.getElementById('result');
+
+			res.onclick = function() {
+				// body...
+				var result = add(num1,num2);
+				alert(result);
+			}
+
+			
+
+			function add(num1,num2) {
+				// body...
+				result parseInt(num1) + parseInt(num2);
+			}
+
+		}
+
+		}
+	</script>
+
+</head>
+<body>
+	<div id="function1">匿名函数调用</div>
+	<div id="passAgr">函数传递参数</div>
+	<input type="text" value="参数1" id="num1">
+	<input type="text" value="参数2" id="num2">
+	<input type="button" value="结果" id="result" name="">
+	
+</body>
+</html>

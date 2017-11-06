@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery绑定事件</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			// body...
+			// 给按钮绑定事件
+			$('#btn').click(function(){
+				$('.box').toggleClass('sty');
+			})
+		});
+	</script>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 300px;
+			background-color: red;
+		}
+		.sty{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" name="" value="切换" id="btn">
+	<div class="box"></div>
+</body>
+</html>

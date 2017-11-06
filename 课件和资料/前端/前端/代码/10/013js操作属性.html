@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js 基本语法</title>
+	<script type="text/javascript">
+		
+	window.onload = function(){
+
+		var oDiv = document.getElementById('div1');
+		
+		oDiv.title = "我看到了！";
+
+		var oA = document.getElementById('link1');
+
+		oA.href = "http://www.baidu.com";
+
+		oA.title = "去到百度网";
+
+		alert(oA.id);
+
+
+		var h2 = document.getElementById("link2");
+		h2.href="http://www.baidu.com";
+		h2.title = "去北极贝";
+		alert(h2.id);
+	}
+
+
+
+
+	</script>
+</head>
+<body>
+	<div id="div1" class="div1" title="这是div元素，看到了吗？">这是一个div元素</div>
+	<a href="#" id="link1">百度网</a>
+	<a href="#" id="link2">北极贝科技</a>
+
+
+</body>
+</html>

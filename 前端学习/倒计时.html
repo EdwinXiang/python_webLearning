@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器制作倒计时</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			// body...
+			var dis = document.getElementById('div11');
+			alert('asdas');
+			function timeLeft(){
+				var now = new Date();
+				// alert('asda');
+				var future = new Date(2017,11,30,24,0,0);
+				var lefts = parseInt((future-now)/1000);
+				var day = parseInt(lefts/86400);
+				var hour = parseInt(lefts/86400/3600);
+				var min = parseInt(lefts/86400/3600/60);
+				var sec = lefts%60;
+				str = '距离2017年11月30号还有'+day+'天'+hour+'时'+min+'秒'+sec+'分';
+				dis.innerHTML=str;
+			}
+
+			timeLeft();
+			setInterval(timeLeft,1000);
+		}
+	</script>
+</head>
+<body>
+	<div id="div11"></div>
+</body>
+</html>

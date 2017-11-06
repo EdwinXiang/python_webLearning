@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery样式选择器</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+	// 直接加载当前窗口  不需要在使用window.onload方法
+		$(function() {
+			// body...
+			// $div1 = 
+			$('#div1').css({color:'gold'});
+			$('.box').css({color:'gold',fontSize:'30px'});
+			$('.list li').css({background:'green',color:'#fff',fontSize:'20px'});
+		});
+	</script>
+
+	<style type="text/css">
+		#div1{
+			color: red;
+		}
+
+		.box{
+			color: green;
+		}
+		.list li{
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">jquery样式选择器</div>
+	<div class="box">这是第二个div元素</div>
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+</html>

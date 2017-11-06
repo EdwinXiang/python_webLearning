@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML</title>
+	<script type="text/javascript">
+		window.onload=function() {
+			// body...
+			var oDiv = document.getElementById('div1');
+			// 读取
+			var text = oDiv.innerHTML;
+			alert(text);
+			// 写入
+			oDiv.innerHTML = '<a href="http://www.baidu.com" title="">百度网</a>'
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">这是一个div元素</div>
+</body>
+</html>

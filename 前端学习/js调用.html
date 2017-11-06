@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js调用</title>
+	<style type="text/css">
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: cyan;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+		}
+	</style>
+
+	<script type="text/javascript">
+	window.onload=function() {
+		// body...
+		var divS = document.getElementById('linkbox1');
+		var btn01 = document.getElementById('btn01');
+		var btn02 = document.getElementById('btn02');
+
+		divS.style.color = 'red';
+		divS.style.title = "测试点击按钮切换样式";
+		divS.style.fontSize = '30px';
+
+		divS.onclick = myAlert;
+		btn01.onclick = changeBox1;
+		btn02.onclick = changeBox2;
+
+		function myAlert() {
+			// body...
+			alert('ok!');
+		}
+
+		function changeBox1() {
+			// body...
+			divS.className = 'box1';
+		}
+
+		function changeBox2() {
+			// body...
+			divS.className = 'box2';
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="linkbox1" class="box1">改变div元素内容的样式</div>
+	<input type="button" value="样式1" name="" id="btn01">
+	<input type="button" name="" value="样式2" id="btn02">
+</body>
+</html>

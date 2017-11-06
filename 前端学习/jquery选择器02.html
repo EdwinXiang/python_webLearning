@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery选择器02</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			// body...
+			// 修改同级下面所有的元素的文字颜色为红色
+			$('#div1').nextAll('p').css({color:'red'});
+
+			// 修改span0的父元素 设置其宽高和背景色
+			$('#span0').parent().css({width:'100px',height:'50px',background:'gold'});
+
+			//设置span1的最近原色div的宽高和背景色
+			$('#span01').closest('div').css({width:'150px',height:'100px',background:'pink'});
+
+			// 
+			// $('.')
+			$('.list').children().css({background:'gold',height:'30px',marginBottom:'10px'}).end().css({background:'green'});
+
+
+			$('.list2 li:eq(2)').css({background:'gold'}).siblings().css({background:'green'});
+
+
+			$('#div2').find('.link1').css({color:'red'});
+		});
+	</script>
+
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="div1">这是一个div元素</div>
+	<div>这是第二个div元素</div>
+	<p>这是一个p元素</p>
+	<div>
+		<a href="http://www.baidu.com">百度网</a>
+		<span id="span0">百度一下，你就知道</span>
+	</div>	
+
+	<div id="div2">
+		<p>
+			<a href="http://www.tencent.com" class="link1">腾讯网</a>
+			<span id="span01">时刻抵达你的心里</span>
+		</p>
+	</div>
+
+	<ul class="list">
+		<li>春眠不觉晓</li>
+		<li>处处闻啼鸟</li>
+		<li>夜来风雨声</li>
+		<li>花落知多少</li>
+	</ul>
+
+	<ul class="list1">
+		<li>无时无刻</li>
+		<li>想念着你</li>
+		<li>叫大傻逼</li>
+		<li>最美的称呼</li>
+	</ul>
+</body>
+</html>

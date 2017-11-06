@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery样式表</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			// body..
+			// 读取样式
+			alert($('.div1').css('fontSize'));
+
+			// 设置样式
+			$('.div1').css({background:'gold'});
+			$('.div1').addClass('big');
+			$('.div1').removeClass('div1');
+
+		});
+	</script>
+	<style type="text/css" media="screen">
+		.big{
+            font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">冬天已经来了，秋天还会远吗</div>
+	
+</body>
+</html>

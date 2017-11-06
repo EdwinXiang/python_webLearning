@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无缝滚动</title>
+	<style type="text/css">
+		body,ul,li{margin:0;padding:0}
+		ul{list-style:none;}
+		.slide{
+			width:500px;
+			height:100px;
+			border:10px solid #ddd;
+			margin:20px auto 0;
+			position:relative;
+			overflow:hidden;
+		}
+
+		.slide ul{
+			position:absolute;
+			width:1000px;
+			height:100px;
+			left:0;
+			top:0;
+		}
+
+		.slide ul li{
+			width:90px;
+			height:90px;
+			margin:5px;
+			background-color:#ccc;
+			line-height:90px;
+			text-align: center;
+			font-size:30px;
+			float:left;
+		}
+
+		.btns{
+			width:240px;
+			height:50px;
+			background-color: gold;
+			margin:10px 20px 10px;
+		}
+
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			var $ul = $('#slide ul');
+			var left = 0;
+			var deraction = 2;
+
+			$ul.html($ul.html()+$ul.html());
+
+			var timer = setInterval(move,30);
+
+
+			function move(){
+
+				left-=deraction;
+
+				if(left<-500){
+					
+					left = 0;
+				}
+
+				if(left>0){
+
+					left=-500;
+				}
+				$ul.css({left:left});
+			}
+
+
+			$('#btn1').click(function(){
+				deraction = 2;
+			});
+
+			$('#btn2').click(function(){
+				deraction = -2;
+			})
+
+
+			$('#slide').mouseover(function(){
+				clearInterval(timer);				
+			})
+
+			$('#slide').mouseout(function(){
+				timer = setInterval(move,30);			
+			})
+
+		})
+
+
+
+	</script>
+
+
+</head>
+<body>
+	<div class="btns">
+		<input type="button" name="" value="向左" id="btn1" style="height: 50px;width: 100px">
+		<input type="button" name="" value="向右" id="btn2" style="width: 100px;height: 50px">
+
+	</div>
+	<div class="slide" id="slide">
+		<ul>
+			<li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509713979516&di=11957df255315aa563ebe88ee4a2a437&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fe61190ef76c6a7ef38b3161bf6faaf51f3de6672.jpg" alt="" width="90" height="90">1</li>
+			<li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509714069580&di=d5ddff72bc003be2291a85001af8f983&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F4e4a20a4462309f7ec5b2ec3780e0cf3d7cad62f.jpg" alt="" width="90" height="90">2</li>
+			<li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509714148845&di=8eafdb109b74d1529e9dcfa4a7dbbe3d&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F0823dd54564e92580c150e039682d158ccbf4e3e.jpg" alt="" width="90" height="90">3</li>
+			<li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509714193074&di=a9ce83ddd9935fed57990a11e2e29517&imgtype=0&src=http%3A%2F%2Fpic58.nipic.com%2Ffile%2F20150112%2F12299514_224005339000_2.jpg" alt="" width="90" height="90">4</li>
+			<li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509714222836&di=440d4af89be8022598c33ee8339cbab0&imgtype=0&src=http%3A%2F%2Fwww.pp3.cn%2Fuploads%2F201601%2F2016011904.jpg" alt="" width="90" height="90"></li>			
+		</ul>
+	</div>
+</body>
+</html>
